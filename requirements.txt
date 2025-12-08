@@ -1,0 +1,14 @@
+streamlit
+requests
+beautifulsoup4
+pandas
+numpy
+scikit-learn
+plotly
+nltk
+textblob
+wordcloud
+textstat
+python-dateutil
+tldextract
+lxml

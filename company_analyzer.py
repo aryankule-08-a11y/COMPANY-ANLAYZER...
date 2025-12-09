@@ -1,8 +1,4 @@
 # app.py
-import streamlit as st
-from utils import CompanyAnalyzer
-
-
 st.set_page_config(page_title="Company Analyzer", layout="wide")
 
 
@@ -69,4 +65,16 @@ st.plotly_chart(result['sentiment_pie'], use_container_width=True)
 with s2:
 st.write('Sentiment scores (VADER)')
 st.table(result['sentiment_scores'])
+
+
+st.markdown('---')
+st.subheader('Executive Summary (Auto-generated)')
+st.markdown(result['executive_summary'])
+
+
+st.markdown('---')
+st.write('**Raw metadata & diagnostics**')
+st.json(result['diagnostics'])
+
+
 st.success('Analysis complete — use the executive summary & visuals for reports.')
